@@ -12,34 +12,31 @@ Getting Started
 2. Create a solidity file with .sol as its filename
 3. Copy and paste the code below
 
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
 
-contract MyNewToken {
-
-    // public variables here
+contract MyToken{
+    public variables here
     string public tokenName = "Dickson Vecina";
-    string public tokenAbbrv = "DV";
+    string public tokenAbbrv = "Token";
     uint public totalSupply = 0;
 
-    // mapping variable here
-    mapping(address => uint) public balances;
+mapping(address => uint) public balances;
+function mint(address _address, uint _value)
 
-    // mint function
-    function mint(address _address, uint _value) public {
+public {
         totalSupply += _value;
         balances[_address] += _value;
     }
 
-    // burn function
-    function burn(address _address, uint _value) public {
+function burn(address _address, uint _value) public {
         if (balances[_address] >= _value) {
             totalSupply -= _value;
             balances[_address] -= _value;
         }
     }
-
 }
+    
 
 4.Compile and run the project
 
