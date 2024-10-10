@@ -13,6 +13,7 @@ Getting Started
 3. Copy and paste the code below
 
 //SPDX-License-Identifier: MIT
+
 pragma solidity 0.8.26;
 
 contract MyToken{
@@ -42,6 +43,7 @@ function burn(address _address, uint _value) public {
 
 5.Deploy the project
 
+# HELP 
 Note: If 0.8.26 version is having issues for you, try using other versions.
 
 Author
