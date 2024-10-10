@@ -1,53 +1,70 @@
-# Solidity Assesment
-Project that has a mint and burn token function
+# Solidity Creating Token
 
-Description
+This project mints and burns tokens.
 
-Metacrafters solidity assesment - ETH PROOF: Beginner EVM Course
+## Description
 
-A beginner course for how we can understand and apply minting and burning tokens
+This is an assessment given by MetaCrafters under the ETH PROOF: Beginner EVM Course.
 
-Getting Started
-1. Open https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.26+commit.8a97fa7a.js
-2. Create a solidity file with .sol as its filename
-3. Copy and paste the code below
+## Getting Started
 
-//SPDX-License-Identifier: MIT
+### Executing program
 
+Follow these steps to execute the program:
+
+1. Open [Remix](https://remix.ethereum.org/).
+2. Create a new Solidity file with a `.sol` extension.
+3. Copy and paste the following code into the created file:
+
+```solidity
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
 
-contract MyToken{
-    public variables here
+contract MyToken {
+
+    // public variables here
     string public tokenName = "Dickson Vecina";
-    string public tokenAbbrv = "Token";
+    string public tokenAbbrv = "DV";
     uint public totalSupply = 0;
 
-mapping(address => uint) public balances;
-function mint(address _address, uint _value)
+    // mapping variable here
+    mapping(address => uint) public balances;
 
-public {
+    // mint function
+    function mint(address _address, uint _value) public {
         totalSupply += _value;
         balances[_address] += _value;
     }
 
-function burn(address _address, uint _value) public {
+    // burn function
+    function burn(address _address, uint _value) public {
         if (balances[_address] >= _value) {
             totalSupply -= _value;
             balances[_address] -= _value;
         }
     }
 }
-    
 
-4.Compile and run the project
+```
+* Compile the project and make sure to select 0.8.26 as the version of the compiler.
+* Deploy the project
+  
+## Help
 
-5.Deploy the project
+### Common Problems
+* MIT license not specified.
+```
+// SPDX-License-Identifier: MIT
+```
+* Incorrect solidity version.
+```
+pragma solidity 0.8.18;
+```
+* Correct solidity version.
+```
+pragma solidity 0.8.26;
+```
 
-# HELP 
-Note: If 0.8.26 version is having issues for you, try using other versions.
-
-Author
-
-Dickson Vecina
-
-202110060@fit.edu.ph
+## Authors
+Contributors' names and contact info:
+[202110060@fit.edu.ph] (https://github.com/Yosoo-12)
