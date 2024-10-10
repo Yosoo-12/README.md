@@ -1,3 +1,19 @@
+# Solidity Assesment
+Project that has a mint and burn token function
+
+Description
+
+Metacrafters solidity assesment - ETH PROOF: Beginner EVM Course
+
+A beginner course for how we can understand and apply minting and burning tokens
+
+Getting Started
+1. Open https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.26+commit.8a97fa7a.js
+2. Create a solidity file with .sol as its filename
+3. Copy and paste the code below
+
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
 
 contract MyNewToken {
 
